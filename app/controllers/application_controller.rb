@@ -3,35 +3,7 @@ class ApplicationController < Sinatra::Base
 
   #GET PORTION
   get '/' do
-    %{
-      THIS IS STAR LIGHT UNIVERSITY Database
-      Here are some of our endpoints:
-      
-      GET requests:
-      /students
-      /teachers
-      /courses
-      /students/:id
-      /courses/:id
-      /teachers/:id
-      POST requests:
-      /students
-      /teachers
-      /courses
-      DELETE requests:
-      /students/:id
-      /teachers/:id
-      /courses/:id
-      PATCH requests
-      /students/:id
-        students patches only name and planet
-      /teachers/:id
-        teachers patches only name, street address, salary and specialisation
-      /courses/:id
-        courses patches only fees_amount, course_period, total_units
-      PUT requests
-      same endpoints as patch requests but will change all the relevant fields
-      }
+    puts "Welcome"
   end
   get '/students' do
     all_students = Student.all
